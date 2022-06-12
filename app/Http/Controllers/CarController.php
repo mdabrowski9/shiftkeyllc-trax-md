@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CarStoreRequest;
 use App\Models\Car;
-use Illuminate\Http\Request;
 
 class CarController extends Controller
 {
@@ -14,10 +14,9 @@ class CarController extends Controller
         ];
     }
 
-    public function store(Request $request)
+    public function store(CarStoreRequest $request)
     {
-        $newCar = new Car();
-        $newCar->fill($request->toArray())->save();
+        Car::create($request->validated());
     }
 
     public function show(int $carId): Car

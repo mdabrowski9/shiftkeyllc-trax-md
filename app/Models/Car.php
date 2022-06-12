@@ -16,7 +16,6 @@ class Car extends Model
         'year',
         'trip_count',
         'trip_miles',
-        'user_id',
     ];
 
     protected $casts = [

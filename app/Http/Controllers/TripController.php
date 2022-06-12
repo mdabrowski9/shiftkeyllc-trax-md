@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TripStoreRequest;
 use App\Models\Car;
 use App\Models\Trip;
 use Illuminate\Http\Request;
@@ -21,9 +22,8 @@ class TripController extends Controller
         ];
     }
 
-    public function store(Request $request)
+    public function store(TripStoreRequest $request)
     {
-        $newTrip = new Trip();
-        $newTrip->fill($request->toArray())->save();
+        Trip::create($request->validated());
     }
 }

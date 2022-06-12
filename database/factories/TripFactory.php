@@ -18,7 +18,7 @@ $factory->define(Trip::class, function (Faker $faker) {
     return [
         'date' => $faker->date(),
         'miles' => $miles,
-        'total' => $miles + $faker->randomFloat(2,0, 100),
+//        'total' => $miles + $faker->randomFloat(2,0, 100),
         'car_id' => $car->id
     ];
 });

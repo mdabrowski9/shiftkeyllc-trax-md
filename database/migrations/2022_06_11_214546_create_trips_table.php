@@ -17,7 +17,7 @@ class CreateTripsTable extends Migration
             $table->id();
             $table->date('date');
             $table->float('miles');
-            $table->float('total');
+//            $table->float('total');
             $table->integer('car_id');
             $table->timestamps();
         });
