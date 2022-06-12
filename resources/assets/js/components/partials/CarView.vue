@@ -54,11 +54,11 @@
             fetch() {
                 axios.get(traxAPI.getCarEndpoint(this.$route.params.id))
                     .then(response => {
-                        this.year = response.data.data.year;
-                        this.make = response.data.data.make;
-                        this.model = response.data.data.model;
-                        this.trip_count = response.data.data.trip_count;
-                        this.trip_miles = response.data.data.trip_miles;
+                        this.year = response.data.year;
+                        this.make = response.data.make;
+                        this.model = response.data.model;
+                        this.trip_count = response.data.trip_count;
+                        this.trip_miles = response.data.trip_miles;
                     }).catch(e => {
                     console.log(e);
                 });
